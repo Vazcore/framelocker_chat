@@ -1,0 +1,19 @@
+-- Adminer 3.6.1 MySQL dump
+
+SET NAMES utf8;
+
+DROP DATABASE IF EXISTS `chat`;
+CREATE DATABASE `chat` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `chat`;
+
+CREATE TABLE `chat_messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user` int(11) NOT NULL,
+  `webinar` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- 2014-10-22 15:31:40
